@@ -13,12 +13,33 @@ public class Main {
         }
 
         // test
-        boolean result = isUnique("word");
+        boolean result = isUnique("testing");
         System.out.println(result);
+
 
     }
 
     public static boolean isUnique(String word) {
-        return false;
+        int count = 0;
+
+        if (word.isEmpty()) {
+            return true;
+        }
+
+        for (int i = 0; i < word.length(); i++) {
+            char character = word.charAt(i);
+
+            for (int z = 0; z < word.length(); z++) {
+                if (character == word.charAt(z)) {
+                    count++;
+                }
+            }
+        }
+
+        if (count > word.length()){
+            return false;
+        } else {
+            return true;
+        }
     }
 }
