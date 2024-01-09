@@ -15,7 +15,6 @@ public class Main {
         // test
         boolean result = isUnique("word");
         System.out.println(result);
-        //
     }
 
     public static boolean isUnique(String word) {
